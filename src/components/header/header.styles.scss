@@ -1,0 +1,11 @@
+
+.header{
+    border-bottom: 1px solid #E7E7E7;
+    padding: 10px 20px;
+    .navbar{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
