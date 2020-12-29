@@ -1,8 +1,16 @@
-@import './themes/theme.scss';
+@import './assets/styles/mixins.scss';
 
-#root{
-  background-color: $primary-bkg ;
+.App{
+  &.darkTheme{
+    @include loadTheme("dark");
+  }
+  &.lightTheme{
+    @include loadTheme("light");
+  }
+}
+.App{
+  
 }
 *{
-  color: $primary-font;
+  
 }

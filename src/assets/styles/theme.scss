@@ -1,0 +1,15 @@
+/**
+**
+*This file will contain all the variable wich interfer in the theme change
+**
+**/
+$themes:(
+    light: (
+        $primary-bkg : #FAFAFA,
+        $primary-font: #212529
+    )
+    dark: (
+        $primary-bkg : #343a40,
+        $primary-font: #FFFFFF
+    )
+) 

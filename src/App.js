@@ -18,9 +18,8 @@ class App extends React.Component{
   render(){
     const { toggleDarkTheme } = this.state;
     return (
-      <div className="App">
-          <Header toggleDarkTheme={toggleDarkTheme} changeTheme = {this.changeTheme} />
-          
+      <div className={toggleDarkTheme ? "App lightTheme" : "App darkTheme"}>
+        <Header toggleDarkTheme={toggleDarkTheme} changeTheme = {this.changeTheme} />
       </div>
     );
   }
