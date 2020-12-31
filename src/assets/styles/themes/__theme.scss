@@ -5,11 +5,11 @@
 **/
 $themes:(
     light: (
-        $primary-bkg : #FAFAFA,
-        $primary-font: #212529
-    )
+        primary-bkg : #FAFAFA,
+        primary-font: #212529
+    ),
     dark: (
-        $primary-bkg : #343a40,
-        $primary-font: #FFFFFF
+        primary-bkg : #343a40,
+        primary-font: #FFFFFF
     )
 ) 

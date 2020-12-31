@@ -1,17 +1,31 @@
 @import './assets/styles/mixins/_mixins.scss';
+@import './assets/styles/themes/__theme.scss';
 
 .App{
-  @debug "khedama ana";
-  &.darkTheme{
-    @include loadTheme("dark");
-  }
-  &.lightTheme{
-    @include loadTheme("light");
-  }
-}
-.App{
-  
+    height: 100vh;
+    @include themify($themes){
+      background-color: themed($theme-map, "primary-bkg"); 
+    }
+    .row{
+      margin: 0px;
+      .cards{
+        padding: 0;
+        height: calc(100vh - 77px);
+      }
+      .full-content{
+        display: flex;
+        flex-flow: row wrap;
+        overflow: scroll;
+        img{
+          width: 30%;
+          padding: 10px 5px;
+        }
+      }
+    }
 }
 *{
-  
+  @include themify($themes){
+    color: themed($theme-map, "primary-font"); 
+  }
 }
+

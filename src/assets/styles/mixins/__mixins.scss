@@ -1,8 +1,13 @@
-@mixin loadTheme($mode){
-    @debug "hello debug : #{$mode}";
-    @if($mode == "dark"){
-        background-color: grey;
-    }@else{
-        
+@import '../themes/_theme.scss';
+
+@mixin themify($themes: $themes){
+    @each $theme, $map in $themes {
+        $theme-map: $map !global;
+        &.#{$theme}{
+            @content
+        }
     }
+};
+@function themed($map, $key){
+    @return map-get($map: $map, $key: $key);
 }

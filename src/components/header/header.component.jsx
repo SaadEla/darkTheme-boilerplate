@@ -4,7 +4,7 @@ import './header.styles.scss'
 const Header = (props) => {
     const {toggleDarkTheme, changeTheme } = props;
     return (
-        <div className="header">
+        <div className={toggleDarkTheme ? "header dark" : "header light"}>
             <nav className="navbar">
                 <div className="navbar-brand">
                     Dark Theme Toogler

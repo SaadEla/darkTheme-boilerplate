@@ -1,0 +1,16 @@
+.content{
+    height: calc((100vh - 77px) / 5);
+    padding: 10px;
+    border: 1px solid  #E7E7E7;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    .section-name{
+        width: 60%;
+    }
+    span{
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
