@@ -1,7 +1,7 @@
 @mixin loadTheme($mode){
     @debug "hello debug : #{$mode}";
     @if($mode == "dark"){
-        
+        background-color: grey;
     }@else{
         
     }

@@ -1,6 +1,7 @@
-@import './assets/styles/mixins.scss';
+@import './assets/styles/mixins/_mixins.scss';
 
 .App{
+  @debug "khedama ana";
   &.darkTheme{
     @include loadTheme("dark");
   }
