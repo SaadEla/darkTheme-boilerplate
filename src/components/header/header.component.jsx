@@ -10,8 +10,8 @@ const Header = (props) => {
                     Dark Theme Toogler
                 </div>
                 <div className="themeSwitch">
-                    <button type="button" className="btn btn-dark" onClick={() => changeTheme()}>
-                        {toggleDarkTheme ? "Light" : "Dark"}
+                    <button type="button" className={toggleDarkTheme ? "btn btn-light" : "btn btn-dark"} onClick={() => changeTheme()}>
+                        {toggleDarkTheme ? "☀" : " ☾"}
                     </button>
                 </div>
             </nav>

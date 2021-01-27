@@ -5,7 +5,7 @@
     height: 100vh;
     @include themify($themes){
       background-color: themed($theme-map, "primary-bkg"); 
-      transition:  0.3s ease;;
+      transition:  0.3s ease;
     }
     .row{
       margin: 0px;
