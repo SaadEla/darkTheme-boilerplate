@@ -4,8 +4,8 @@ import SHOP_DATA from './assets/shop.data';
 import CardComponent from './components/card/card.component';
 import Header from './components/header/header.component';
 
-class App extends React.Component{
-  constructor(props){
+class App extends React.Component {
+  constructor(props) {
     super(props)
     this.state = {
       toggleDarkTheme: false,
@@ -14,7 +14,6 @@ class App extends React.Component{
     }
   }
   changeTheme = () => {
-    console.log("salam");
     this.setState({
       toggleDarkTheme: !this.state.toggleDarkTheme
     })
@@ -24,29 +23,28 @@ class App extends React.Component{
       section: title
     })
   }
-  render(){
-    const { toggleDarkTheme, shopdata, section } = this.state;
+  render() {
+    const { toggleDarkTheme, shopdata } = this.state;
     return (
       <div className={toggleDarkTheme ? "App dark" : "App light"}>
-        <Header toggleDarkTheme={toggleDarkTheme} changeTheme = {this.changeTheme} />
+        <Header toggleDarkTheme={toggleDarkTheme} changeTheme={this.changeTheme} />
         <div className="row">
           <div className="cards col-3">
-            {shopdata.map(section => 
+            {shopdata.map(section =>
               <CardComponent key={section.routeName} title={section.title} chooseSection={this.chooseSection}></CardComponent>
-              )}
+            )}
           </div>
           <div className="full-content col">
-          {shopdata.map(section => {
-                    if(section && section.title === this.state.section){
-                      return section.items.map(item => {
-                        if(item){
-                          console.log(item);
-                          return <img key={item.id} src={item.imageUrl}></img>
-                        }
-                      })
-                    }
-                  })
-          }
+            {shopdata.map(section => {
+              if (section && section.title === this.state.section) {
+                return section.items.map(item => {
+                  if (item) {
+                    return <img key={item.id} src={item.imageUrl} alt=""></img>
+                  } else return ''
+                })
+              } else return ''
+            })
+            }
           </div>
         </div>
       </div>
